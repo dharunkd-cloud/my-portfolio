@@ -1,0 +1,161 @@
+.ctrl-lol {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  text-align: center;
+  color: #222;
+}
+
+.quote-section {
+  margin-top: 20px;
+}
+
+.quote {
+  background: #f0f0f0;
+  padding: 10px;
+  margin: 5px auto;
+  width: fit-content;
+  border-radius: 6px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slideshow-container {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.footer-note {
+  margin-top: 30px;
+  font-style: italic;
+  color: #666;
+}
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background-color: #444;
+}
+
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.ask-section {
+  margin-top: 40px;
+  padding: 40px 0;
+  background-color: #f8f8f8;
+}
+
+.ask-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0; /* we’ll pad the inner form only */
+}
+
+.form-inner {
+  padding: 20px;
+}
+
+.form-inner input,
+.form-inner textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-inner textarea {
+  resize: none;
+}
+
+.form-inner button {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-inner button:hover {
+  background-color: #444;
+}
+
+/* 🌙 DARK MODE - CtrlLol */
+.dark-mode.ctrl-lol {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .quote {
+  background: #2a2a2a;
+  color: #ddd;
+}
+
+.dark-mode .footer-note {
+  color: #aaa;
+}
+
+.dark-mode .slide img {
+  box-shadow: 0px 5px 15px rgba(255,255,255,0.1);
+}
+
+.dark-mode .back-button {
+  background: #333;
+  color: white;
+}
+
+.dark-mode .back-button:hover {
+  background-color: #555;
+}
+.ctrl-lol,
+.quote,
+.back-button,
+.footer-note {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.generate-button {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-button:hover {
+  background-color: #555;
+}
+
+
+
