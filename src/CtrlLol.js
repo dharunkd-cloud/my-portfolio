@@ -1,28 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import './CtrlLol.css';
+import emailjs from 'emailjs-com';
 
 const quotes = [
-  "  Slack online irundha busy nu nenachidatheenga.",
-  " Ticket assign panna yosikama assign panranga.",
-  " Shift time-la irunthum, naa epavum on-call.",
-  " Browser tab close pannale – adhu ticket tab.",
-  " Ctrl + C life, Ctrl + V expectations.",
-  " Rotational shift la rota thaan matter.",
-  " Escalation pota life la clarity kedaiyadhu.",
-  " Seri ivanuku oru escalation ah potruvom.",
-  " Friday late night ticket = full life reset.",
-  " LAN port oda bonding thaniya dhan iruku.",
+  "  LeMe ~ Seri ivanuku oru escalation ah potruvom.",
+  " Night shift perks: More peace, more coffee, and more existential thoughts at 3AM.",
+  " NOC life: Alert comes first, panic later.",
+  " SSH-ing into problems I didn't create, at a time I shouldn't be awake.",
+  " One does not simply 'restart the server' in production.",
+  " Logs say it's fine, user says it's broken. Welcome to tech support!",
+  " Cloud is just someone else's computer – and we’re the someone else on-call.",
+  " ‘It works in staging’ – famous last words before a live outage.",
+  " Downtime doesn’t sleep, and neither do we.",
+  " Slack messages hit different at 2:47 AM.",
+  " Night shifts are 90% waiting and 10% 'Oh no, everything’s on fire!'",
+  " Rotational shift: Where Monday and Sunday both feel illegal.",
   " Monitoring tools la green na calm, red na alarm.",
-  " Boss pesum pothu headphone potruvom – adhu noise cancellation.",
-  " Login panni tea kudikardhu, logout panni summary ezhudharadhu."
+  " Ctrl + C life, Ctrl + V expectations."
 ];
 
 const CtrlLol = ({ goBack, darkMode, setDarkMode }) => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [typewriterText, setTypewriterText] = useState('');
+  const [showModal, setShowModal] = useState(false); // ✅ New: modal toggle state
 
-  // Slide show rotation
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % 5);
@@ -30,22 +32,19 @@ const CtrlLol = ({ goBack, darkMode, setDarkMode }) => {
     return () => clearInterval(interval);
   }, []);
 
-  // ✅ Typewriter effect - FIXED
   useEffect(() => {
-    const currentQuote = quotes[quoteIndex] || ''; // always valid string
-    setTypewriterText(''); // clear before starting
-
+    const currentQuote = quotes[quoteIndex] || '';
+    setTypewriterText('');
     let i = 0;
     const typeInterval = setInterval(() => {
       if (i < currentQuote.length) {
         setTypewriterText((prev) => prev + currentQuote.charAt(i));
         i++;
       } else {
-        clearInterval(typeInterval); // stop typing
+        clearInterval(typeInterval);
       }
     }, 40);
-
-    return () => clearInterval(typeInterval); // cleanup when quoteIndex changes
+    return () => clearInterval(typeInterval);
   }, [quoteIndex]);
 
   const nextQuote = () => {
@@ -90,18 +89,66 @@ const CtrlLol = ({ goBack, darkMode, setDarkMode }) => {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert('Thanks! I’ll get back to you.');
+                const form = e.target;
+                const formData = new FormData(form);
+                const userEmail = formData.get('email');
+                const userName = formData.get('name');
+                const subject = formData.get('title');
+                const message = formData.get('message');
+
+                emailjs.sendForm(
+                  'service_cy6zusa',
+                  'template_xjey87u',
+                  form,
+                  'RGaipTVhUOZtLg_pO'
+                )
+                  .then(() => {
+                    return emailjs.send(
+                      'service_cy6zusa',
+                      'template_tierqje',
+                      {
+                        name: userName,
+                        email: userEmail,
+                        title: subject,
+                        message: message,
+                      },
+                      'RGaipTVhUOZtLg_pO'
+                    );
+                  })
+                  .then(() => {
+                    setShowModal(true); // ✅ Show modal instead of alert
+                  })
+                  .catch((err) => {
+                    console.error('Something failed ❌', err);
+                    alert('Oops! Something went wrong.');
+                  });
+
+                form.reset();
               }}
             >
               <div className="form-inner">
                 <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <input type="text" name="title" placeholder="Subject" required />
                 <textarea name="message" placeholder="Your Question" required rows="4" />
+                <input type="hidden" name="time" value={new Date().toLocaleString()} />
                 <button type="submit">Send 🚀</button>
               </div>
             </form>
           </div>
         </div>
       </section>
+
+      {/* ✅ Success Modal */}
+      {showModal && (
+        <div className="ask-success-modal">
+  <div className="ask-success-content">
+            <h3>✅ Sent Successfully!</h3>
+            <p>Thanks! Your message has been sent. Please check your email 📧</p>
+            <button onClick={() => setShowModal(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

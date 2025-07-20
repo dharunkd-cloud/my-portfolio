@@ -75,9 +75,10 @@ h2 {
 
 /* 🔘 Buttons */
 button,
+
 a.button {
   background-color: var(--blue);
-  color: black;
+  color: black; /* <-- Change to black */
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
@@ -92,6 +93,9 @@ button:hover,
 a.button:hover {
   background-color: var(--purple);
   transform: scale(1.05);
+}
+.reveal-btn {
+  color: black !important;
 }
 
 /* Navigation styling */
