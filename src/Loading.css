@@ -1,0 +1,63 @@
+.circle-loader-wrapper {
+  height: 100vh;
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.circle-loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255,255,255,0.3);
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle-loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color); /* use your theme background */
+  color: var(--text-color); /* supports dark mode */
+  text-align: center;
+}
+
+.circle-loader {
+  width: 120px;
+  height: 120px;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #00bcd4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1.2s linear infinite;
+  position: relative;
+}
+
+.loader-logo-center {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

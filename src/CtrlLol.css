@@ -3,6 +3,7 @@
   padding: 20px;
   text-align: center;
   color: #222;
+  position: relative;
 }
 
 .quote-section {
@@ -16,6 +17,20 @@
   width: fit-content;
   border-radius: 6px;
   animation: fadeIn 0.5s ease-in-out;
+  max-width: 90%;
+  overflow-wrap: break-word;
+  font-weight: 500;
+}
+
+/* Typewriter effect (text animates, JS handles the actual text reveal) */
+.quote::after {
+  content: '|';
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }
 
 .slideshow-container {
@@ -38,6 +53,7 @@
   font-style: italic;
   color: #666;
 }
+
 .back-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -53,11 +69,11 @@
   background-color: #444;
 }
 
-
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
 .ask-section {
   margin-top: 40px;
   padding: 40px 0;
@@ -70,7 +86,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
-  padding: 0; /* we’ll pad the inner form only */
+  padding: 0;
 }
 
 .form-inner {
@@ -134,12 +150,15 @@
 .dark-mode .back-button:hover {
   background-color: #555;
 }
+
 .ctrl-lol,
 .quote,
 .back-button,
 .footer-note {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* 🎲 Quote button */
 .generate-button {
   margin: 20px auto;
   display: block;
@@ -157,5 +176,52 @@
   background-color: #555;
 }
 
+/* 🌙 Toggle button - top right */
+.toggle-dark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
+.toggle-dark:hover {
+  transform: scale(1.2);
+}
+/* 🦶 Footer Styling */
+.footer {
+  background-color: var(--purple);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Make logo white-like on purple */
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+}
+
+/* 🌙 Footer in Dark Mode */
+.App.dark .footer {
+  background-color: #111;
+  color: #ccc;
+}
+
+.App.dark .footer-logo {
+  filter: brightness(1.2) invert(0.8); /* Adjust for dark mode */
+}
