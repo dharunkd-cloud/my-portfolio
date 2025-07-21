@@ -197,9 +197,11 @@
 }
 
 .ask-section {
-  margin-top: 40px;
-  padding: 40px 0;
-  background-color: #f8f8f8;
+ margin-top: 40px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;;
 }
 
 .ask-box {
@@ -313,6 +315,47 @@
 .toggle-dark:hover {
   transform: scale(1.2);
 }
+.hobbies-section {
+  margin-top: 40px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hobbies-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.hobbies-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hobbies-section li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.hobbies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dark-mode .hobbies-section {
+   color: #050505
+}
+
+.dark-mode .hobbies-section h2 {
+   color: #050505;
+}
+
+.dark-mode .hobbies-section li {
+  color: #050505;
+}
+
 /* 🦶 Footer Styling */
 .footer {
   background-color: var(--purple);

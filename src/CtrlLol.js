@@ -75,11 +75,18 @@ const CtrlLol = ({ goBack, darkMode, setDarkMode }) => {
           </div>
         ))}
       </div>
-
-      <div className="footer-note">
+       <div className="footer-note">
         More memes & screenshots coming soon from Dharun's meme vault 💥
       </div>
-
+<section id="hobbies" className="hobbies-section">
+  <h2>Hobbies & Interests</h2>
+  <li>🎵 <strong>Music:</strong> Always vibing to playlists — from Lo-fi to Tamil Bass Boosted hits.</li>
+  <li>🎬 <strong>Movies & Series:</strong> Comedy, feel-good, and romantic genres — perfect for binge-watching.</li>
+  <li>🚍 <strong>Solo Bus Travel:</strong> Front seat, speed, horn sounds, overtaking thrills with 80s hits.</li>
+  <li>🍽️ <strong>Foodie:</strong> Love exploring new foods — even though I can’t eat much, tasting is enough! 😄.</li>
+  <li>📱 <strong>Instagram Reels:</strong> Watching reels, adding stories, and vibing with trends.</li>
+  
+</section>
       <button onClick={goBack} className="back-button">🔙 Back to Portfolio</button>
 
       <section id="ask" className="ask-section">

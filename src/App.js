@@ -162,7 +162,7 @@ function App() {
               <p><strong>Tools:</strong> Observium, Nagios, Zammad.</p>
               <h3>Aaptteknous – Parent Company</h3>
               <p><em>Bangalore • Apr 2024 – Present</em></p>
-              <p><em>“Pesama Inga join pannamaiye irundhu irukalam… inga onnum learn panna mudila. Just alerts, escalations, and occasional existential crisis.”</em></p>
+              <p><em>“Honestly, should’ve just skipped joining here... couldn’t really learn anything. Just alerts, escalations, and the occasional existential crisis.”</em></p>
 
             </div>
             <div>
@@ -186,7 +186,7 @@ function App() {
               <li>CRM Tools & Data Management.</li>
               <li>Process Optimization & Compliance.</li>
               <p><strong>Tools & Platforms:</strong> Salesforce CRM, Amazon WorkSpaces.</p>
-              <p><em>“Landed through campus placement. Stayed for the free AC. Left for my sanity.. (Edhuku??)”</em></p>
+              <p><em>“Landed through campus placement. Stayed for the free AC. Unfortunately had to leave due to the situation… (Edhuku??)”</em></p>
             </div>
           </section>
         </CSSTransition>
@@ -195,9 +195,9 @@ function App() {
           <section id="education">
             <h2>Education</h2>
             <ul>
-              <li>BE.CSE - Selvam College of Technology, Namakkal (2018–2022) - 7.5 CGPA</li>
+              <li>B.E in Computer Science and Engineering - Selvam College of Technology, Namakkal (2018–2022) - <em>7.5 CGPA</em></li>
               <li>HSC – Trinity Academy, Namakkal (2015–2017) - <em>“Marks confidential. But survived and upgraded to Engineering.”</em> </li>
-              <li>SSLC – The Spectrum Academy, Namakkal (2003–2015) - 87.6%</li>
+              <li>SSLC – The Spectrum Academy, Namakkal (2014–2015) - <em>87.6%</em></li>
             </ul>
           </section>
         </CSSTransition>
