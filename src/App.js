@@ -231,7 +231,7 @@ function App() {
               <a href="https://www.linkedin.com/in/dharunkannan" target="_blank" rel="noreferrer">
                 <FaLinkedin /> LinkedIn
               </a> | 
-              <a href="https://github.com/dharunkannan" target="_blank" rel="noreferrer">
+              <a href="https://github.com/dharunkd-cloud" target="_blank" rel="noreferrer">
                 <FaGithub /> GitHub
               </a> |
               <a href="https://www.instagram.com/dharunkd__" target="_blank" rel="noreferrer">
