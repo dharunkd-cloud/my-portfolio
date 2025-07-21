@@ -102,14 +102,21 @@ function App() {
 
         <CSSTransition key="skills" timeout={500} classNames="fade">
           <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-              <li>AWS • Krutrim • Azure</li>
-              <li>Cloud & IT Infrastructure • Server & Network Monitoring • Incident & Escalation Management</li>
-              <li>OP Manager • Zabbix • Grafana • Observium • Nagios</li>
-              <li>Openstack • Kubernetes • Docker</li>
-              <li>Operations Support 24x7 • Cloud Security (Learning AWS, Azure,)</li>
-            </ul>
+           <h2>Skills</h2>
+<ul>
+  <li><strong>Cloud Platforms:</strong> AWS <em>(Hands-on)</em>, Azure <em>(Learning)</em>, Krutrim <em>(Familiar)</em>.</li>
+  <li><strong>Cloud & IT Infrastructure:</strong> Experience in Cloud Infrastructure Monitoring, Server & Network Operations.</li>
+  <li><strong>Monitoring Tools:</strong> OP Manager, Zabbix, Grafana, Observium, Nagios. </li>
+  <li><strong>Cloud Technologies:</strong> Basic understanding of OpenStack, Kubernetes, Docker.</li>
+  <li><strong>Operating Systems:</strong> Linux <em>(Hands-on)</em>, Windows Server.</li>
+  <li><strong>Cloud Security:</strong> Learning AWS IAM, VPC Security, encryption, Azure Security Center, compliance standards. <br />
+  <em>Planning to deep dive further into Cloud Security — so I can officially list it as a core skill. 😄🔐</em></li>
+  <li><strong>Frontend Development:</strong> HTML, CSS, JavaScript, and React — hands-on through personal projects.</li>
+  <li><strong>Programming:</strong> Java & Python <em>(Beginner)</em>.</li>
+  <li><strong>Web Servers & Tools:</strong> Basic knowledge of NGINX for serving and proxy setups.</li>
+  <li><strong>Operations Support:</strong> Providing 24x7 Production Support, Incident Management and Escalation Handling.</li>
+</ul>
+
           </section>
         </CSSTransition>
 
@@ -137,36 +144,49 @@ function App() {
             <h2>Work Experience</h2>
             <div>
               <ul>
-                <h3>OLA Krutrim – Full-time (On-site)-NOC-KCC Engineer</h3>
-                <p>Bangalore • Apr 2024 – Present</p>
-                <li>Core Infrastructure Monitoring : All Servers and Networks of OLA Services  </li>
-                <li>Krutrim Cloud Services : Cloud VMs, Ceph storage, Load Balancers, Node health</li>
-                <li>Krutrim Command Center</li>
-                <li>Krutrim Support</li>
-                <li>Internet support – PAN India OLA EC/SDC/WS</li>
-                <li>24x7 Ops + Escalation Handling</li>
+                <h3>OLA Krutrim – Full-time (On-site) | System Engineer (NOC & KCC) </h3>
+                <p><em>Bangalore • Apr 2024 – Present</em></p>
+                <li>Core Infrastructure Monitoring : All Servers and Networks of OLA Services.  </li>
+                <li>Krutrim Cloud Services : Cloud VMs, Ceph storage, Load Balancers, Node health.</li>
+                <li>Krutrim Command Center.</li>
+                <li>Krutrim Support.</li>
+                <li>Internet support – PAN India OLA EC/SDC/WS.</li>
+                <li>24x7 Ops + Escalation Handling.</li>
               </ul>
-              <p>Tools: Zabbix, OP Manager, Grafana, ServiceNow, JIRA</p>
-              <h4>Previous Projects: Wipro – WIN, CCLG, KPM</h4>
-              <li>Conducted system health checks, log analysis, and daily monitoring of critical servers</li>
-              <li>Managed scheduled patching, backup verification, and software deployments</li>
-              <li>Administered user access control, Active Directory permissions, and server cleanup routines</li>
-              <li>Hands-on with incident ticketing, escalation flows, and stakeholder communication</li>
-              <p>Tools: Observium, Nagios, Zammad</p>
+              <p><strong>Tools:</strong> Zabbix, OP Manager, Grafana, ServiceNow, JIRA.</p>
+              <h4>Previous Projects: Wipro – WIN, CCLG, KPM | System Engineer</h4>
+              <li>Conducted system health checks, log analysis, and daily monitoring of critical servers.</li>
+              <li>Managed scheduled patching, backup verification, and software deployments.</li>
+              <li>Administered user access control, Active Directory permissions, and server cleanup routines.</li>
+              <li>Hands-on with incident ticketing, escalation flows, and stakeholder communication.</li>
+              <p><strong>Tools:</strong> Observium, Nagios, Zammad.</p>
               <h3>Aaptteknous – Parent Company</h3>
-              <p>Bangalore • Apr 2024 – Present</p>
+              <p><em>Bangalore • Apr 2024 – Present</em></p>
               <p><em>“Pesama Inga join pannamaiye irundhu irukalam… inga onnum learn panna mudila. Just alerts, escalations, and occasional existential crisis.”</em></p>
 
             </div>
             <div>
-              <h3>ITSA Solutions – Network Engineer</h3>
-              <p>Chennai • Jan 2023 – Apr 2024</p>
+              <h3>ITSA Solutions | Network Engineer</h3>
+              <p><em>Chennai • Jan 2023 – Apr 2024</em></p>
+              <li>Managed and maintained network devices like routers, switches, and firewalls.</li>
+              <li>Configured VLANs, VPNs, and security policies for safe and efficient communication</li>
+              <li>Monitored network performance and fixed issues to reduce downtime.</li>
+              <li>Implemented firewall rules and security measures like IDS/IPS.</li>
+              <li>Worked with teams to improve and scale network infrastructure.</li>
+              <li>Documented network setups and troubleshooting steps.</li>
               <p><em>“Nalla dha pochu… but not enough. Gained solid hands-on experience, but something was always missing.”</em></p>
             </div>
             <div>
-              <h3>Sutherland – CS Associate</h3>
-              <p>Chennai • Aug 2022 – Oct 2022</p>
-              <p><em>“Landed through campus placement. Stayed for the free AC. Left for my sanity (Edhuku??)”</em></p>
+              <h3>Sutherland | CS Associate</h3>
+              <p><em>Chennai • Aug 2022 – Oct 2022</em></p>
+              <p>Worked in the Amazon WFSCO process at Sutherland and gained expertise in:</p>
+              <li>Customer Support & Query Resolution.</li>
+              <li>Workforce Staffing & Scheduling.</li>
+              <li>Effective Communication & Problem-Solving.</li>
+              <li>CRM Tools & Data Management.</li>
+              <li>Process Optimization & Compliance.</li>
+              <p><strong>Tools & Platforms:</strong> Salesforce CRM, Amazon WorkSpaces.</p>
+              <p><em>“Landed through campus placement. Stayed for the free AC. Left for my sanity.. (Edhuku??)”</em></p>
             </div>
           </section>
         </CSSTransition>
@@ -175,9 +195,9 @@ function App() {
           <section id="education">
             <h2>Education</h2>
             <ul>
-              <li>BE.CSE - Selvam College of Technology, Namakkal (2018–2022), 7.5 CGPA</li>
-              <li>HSC – Trinity Academy, Namakkal (2015–2017) <em>“Marks confidential. But survived and upgraded to Engineering.”</em> </li>
-              <li>SSLC – The Spectrum Academy, Namakkal (2003–2015), 87.6%</li>
+              <li>BE.CSE - Selvam College of Technology, Namakkal (2018–2022) - 7.5 CGPA</li>
+              <li>HSC – Trinity Academy, Namakkal (2015–2017) - <em>“Marks confidential. But survived and upgraded to Engineering.”</em> </li>
+              <li>SSLC – The Spectrum Academy, Namakkal (2003–2015) - 87.6%</li>
             </ul>
           </section>
         </CSSTransition>
